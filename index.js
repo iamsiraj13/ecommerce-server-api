@@ -36,7 +36,9 @@ app.use("/api/product", productRouter);
 // app.use("/api/color", colorRouter);
 // app.use("/api/enquiry", enqRouter);
 // app.use("/api/upload", uploadRouter);
-
+app.get("/", (req, res) => {
+  res.json("Hello world");
+});
 app.use(notFound);
 app.use(errorHandler);
 app.listen(PORT, () => {
